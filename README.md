@@ -6,25 +6,10 @@ The primary function within this repository is designed to fetch, process, and s
 
 Big thank you to `lambgeo/lambda-gdal` for adding a GDAL Lamda Layer. 
 
-How to redeploy this code:
+## Deployment
 
-`python3 -m venv venv`
+Make the script executable:
+`chmod +x deploy.sh`
 
-`source venv/bin/activate`
-
-`pip install -r requirements.txt`
-
-`pip install -r requirements.txt -t ./package/`
-
-`cp *.py ./package/`
-
-`cd package`
-
-`zip -r9 ../package.zip .`
-
-`cd ..`
-
-Copy to S3 Storage
-`aws s3 cp package.zip s3://aurora-explorer-data/`
-
-And then Terraform will pick up the change
+Then, to deploy the code (assuming you have write access to `s3://aurora-explorer-data/`), simply run:
+`./deploy.sh`
