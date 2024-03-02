@@ -1,2 +1,5 @@
 # aurora-explorer-lambda-functions
- Code for AWS Lambda functions used in data retrieval, processing, and serving the Aurora Borealis data
+
+This repository contains the AWS Lambda functions for the Interactive Aurora Borealis Explorer project. The primary function within this repository is designed to fetch, process, and store Aurora Borealis forecast data and the Hemispheric Power Index (HPI) data. 
+
+To facilitate this, we employ custom Docker images based on `lambgeo/lambda-gdal` and AWS Lambda's Python runtime environments. 
