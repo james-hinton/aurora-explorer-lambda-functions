@@ -1,3 +1,6 @@
 *.zip
 package/
 venv/
+*.tiff
+*.tif
+*.pyc
