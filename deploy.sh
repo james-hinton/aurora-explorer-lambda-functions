@@ -1,23 +1,18 @@
 #!/bin/bash
 
-echo "Setting up virtual environment..."
-python3 -m venv venv
-source venv/bin/activate
-
 echo "Installing dependencies..."
-pip install -r requirements.txt
-pip install -r requirements.txt -t ./package/
+mkdir python
+pip install -r requirements.txt -t python/
 
 echo "Copying Python files to the package directory..."
-# Ensure the package directory is clean and exists
-rm -rf package
-mkdir package
-cp *.py ./package/
+cp *.py python/
 
 echo "Creating the deployment package..."
-cd package || exit
+cd python || exit
 zip -r9 ../package.zip .
 cd .. || exit
+
+rm -rf python
 
 echo "Copying to S3 Storage..."
 aws s3 cp package.zip s3://aurora-explorer-data/
