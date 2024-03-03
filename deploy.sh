@@ -9,6 +9,9 @@ pip install -r requirements.txt
 pip install -r requirements.txt -t ./package/
 
 echo "Copying Python files to the package directory..."
+# Ensure the package directory is clean and exists
+rm -rf package
+mkdir package
 cp *.py ./package/
 
 echo "Creating the deployment package..."

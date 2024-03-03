@@ -1,6 +1,4 @@
 import requests
-import json
-
 
 def fetch_aurora_data():
     # Fetch data from Aurora

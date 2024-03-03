@@ -4,3 +4,4 @@ venv/
 *.tiff
 *.tif
 *.pyc
+data/
