@@ -1,5 +1,12 @@
-# Create Timelapse (Still in Development, Proof of Concept)
+# Timelapse Generator (Beta Version)
 
-TODO: Works locally, but will need code to get it to work with an S3 bucket required by Lambda.
+## Current Status
+- Functional locally; pending integration for S3 storage to enable AWS Lambda compatibility.
 
-Generates a nice GIF timelapse based off the images you want.
+Creates appealing GIF timelapses from selected images.
+
+## Showcase
+
+**Northern Lights on `2024/03/24`**
+
+<img src="aurora_timelapse_styled.gif" data-canonical-src="aurora_timelapse_styled.gif" width="540" height="486" />
